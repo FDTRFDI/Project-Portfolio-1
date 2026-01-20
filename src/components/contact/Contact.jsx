@@ -73,12 +73,13 @@ const sendEmail = (e) => {
 
     </article>
   ))}
+
   </div>
 
 <form ref={form} onSubmit={ sendEmail}>
 <input type='text' placeholder='full name' name='name'/>
-<input type='email' placeholder='your Email' name='email'/>
-<textarea  name='message' rows={10}  id='' placeholder=' Enter Your message ' ></textarea> 
+<input type='email' placeholder='your Email' name='cc'/>
+<textarea  name='message' rows={10}  id='' placeholder='Enter Your message ' ></textarea> 
 <button className='btn btn-primary'>Send Message </button>
 </form>
 </div> 

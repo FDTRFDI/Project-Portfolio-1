@@ -10,7 +10,7 @@ function Home() {
     <div className='home' id='home'>
       <div className='container home_container'>
         <h4>Hello I'm</h4>
-        <h1>Maged Elsayed Ali</h1>
+        <h1>Maged Elsayed </h1>
         <h4 className='text-light'>Front-End Developer</h4>
         <div className='btns'>
           <a href={CV} className='btn' download>Download Cv</a>
