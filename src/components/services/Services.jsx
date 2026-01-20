@@ -1,9 +1,10 @@
 import React from 'react'
 import "./services.css"
 
-import { MdDangerous } from 'react-icons/md'
-import { IoRocket } from 'react-icons/io5';
+import { MdDesignServices } from 'react-icons/md'
+import { IoRocket } from 'react-icons/io5'
 import { FaCode } from 'react-icons/fa'
+
 
 function Services() {
   return (
@@ -16,7 +17,7 @@ function Services() {
   <div className='container  container_services'>
 
   <article className='card'>
-    <MdDangerous className='icon'/>
+    <MdDesignServices className='icon'/>
      <h3> web Design </h3> 
      <p className='text-light'>
       We create visually appealing websites that adapt perfectly to any device and user needs.

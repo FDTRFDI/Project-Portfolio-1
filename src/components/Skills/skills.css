@@ -8,10 +8,10 @@ flex-wrap: wrap;
 
 .container_skills .card_skill {
 
-width: 24%;
+width: 30%;
 display: flex;
 align-items: center;
-gap: 10px ;
+gap: 5px ;
 border :10px solid var (--color-bg-variant);
 padding: 10px ;
 border-radius: 12px;
@@ -20,9 +20,9 @@ margin-bottom: 20px;
 }
 
 .container_skills .card_skill .icon{
-width: 65% ;
-height: 65% ;
-padding: 7px ;
+width: 40% ;
+height: 40% ;
+padding: 10px ;
 border-radius: 10px ;
 background: var(--color-bg-variant);
 }
