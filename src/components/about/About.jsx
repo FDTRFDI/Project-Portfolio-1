@@ -38,8 +38,8 @@ function About() {
     </div>
 
     </div>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum recusandae presentium, quibusdam ipsa libero quae quisquam adipisci saepe, inventore consectetur, odio ad deserunt porro. Vitae necessitatibus
-    eius sint iste repellendus </p>
+    <p>I am a passionate Front-End Developer focused on building modern, responsive, and user-friendly web applications. I enjoy turning ideas into clean, functional, and visually appealing digital experiences.
+     </p>
     </div>
     </div>
     </section>
