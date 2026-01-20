@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Home.css"
-import me from "../../assets/me.jpg"
+import me from "../../assets/me.jpeg"
 import CV from '../../assets/CV.MAGED.pdf'
 // صححنا اسم الملف HomeSocials
 import HomeSocials from './HomeSocials'
