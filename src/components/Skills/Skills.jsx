@@ -1,7 +1,6 @@
 import { FaHtml5, FaCss3, FaJs, FaReact, FaNodeJs, FaPython, FaGitAlt, FaDocker, FaAws, FaFigma, FaDatabase } from "react-icons/fa";
-import { SiTailwindcss, SiNextdotjs, SiMongodb, SiPostgresql, SiTypescript, SiExpress, SiDjango, SiFirebase, SiKubernetes, SiJira, SiNotion, SiTensorflow, SiPytorch, SiOpenai } from "react-icons/si";
+import { SiTensorflow, SiPytorch, SiRobotframework } from "react-icons/si";
 import "./skills.css";
-
 const skillsData = [
   { icon: <FaHtml5 />, title: "HTML5", desc: "Structure & Markup" },
   { icon: <FaCss3 />, title: "CSS3", desc: "UI Styling" },
@@ -27,8 +26,9 @@ const skillsData = [
   { icon: <FaFigma />, title: "Figma", desc: "Design & UI" },
   { icon: <SiTensorflow />, title: "TensorFlow", desc: "Machine Learning" },
   { icon: <SiPytorch />, title: "PyTorch", desc: "Deep Learning" },
-  { icon: <SiOpenai />, title: "OpenAI", desc: "AI APIs" },
+  { icon: <SiRobotframework />, title: "AI Tools", desc: "Automation & AI" },
 ];
+
 
 function Skills() {
   return (
