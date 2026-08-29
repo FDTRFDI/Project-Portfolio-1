@@ -1,34 +1,47 @@
-import React from 'react'
-import "./Home.css"
-import me from "../../assets/me.png"
-import HomeSocials from './HomeSocials'
+import "./home.css";
+import { FaLinkedin, FaGithub, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 function Home() {
   return (
-    <div className='home' id='home'>
-      <div className='container home_container'>
+    <header id="home">
+      <div className="hero_container">
 
-        <h4>We Build Professional Websites</h4>
-        <h1>Website Development Services</h1>
-        <h4 className='text-light'>
-          Design – Development – SEO – Hosting – Full Support
-        </h4>
-
-        <div className='btns'>
-          <a href='#contact' className='btn btn-primary'>Get Your Website</a>
-          <a href='#services' className='btn'>Explore Services</a>
+        {/* SOCIAL ICONS */}
+        <div className="social_icons">
+          <a href="https://linkedin.com" target="_blank"><FaLinkedin /></a>
+          <a href="https://github.com" target="_blank"><FaGithub /></a>
+          <a href="https://instagram.com" target="_blank"><FaInstagram /></a>
         </div>
 
-        <div className='me'>
-          <img src={me} alt='web development' />
+        {/* MAIN TEXT */}
+        <div className="hero_text">
+          <h1>We Build Professional Websites</h1>
+          <h2>Website Development Services</h2>
+          <p>Design • Development • SEO • Hosting • Full Support</p>
+
+          <div className="hero_btns">
+            <a href="#contact" className="btn btn-primary">Get Your Website</a>
+            <a href="#services" className="btn">Explore Services</a>
+          </div>
         </div>
 
-        <a href='#about' className='scroll_down'>Scroll Down</a>
+        {/* TEAM IMAGE */}
+        <div className="hero_image">
+          <img src="/team-home.jpg" alt="team" />
+        </div>
 
-        <HomeSocials />
+        {/* WHATSAPP FLOATING BUTTON */}
+        <a
+          href="https://wa.me/201234567890"
+          className="whatsapp_float"
+          target="_blank"
+        >
+          <FaWhatsapp />
+        </a>
+
       </div>
-    </div>
-  )
+    </header>
+  );
 }
 
-export default Home
+export default Home;
