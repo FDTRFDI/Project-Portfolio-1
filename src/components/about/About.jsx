@@ -1,6 +1,6 @@
 import React from 'react'
 import "./about.css"
-import IMageME from "../../assets/about.jpg"
+import DevImage from "../../assets/about-dev.png"
 import { FaAward } from "react-icons/fa";
 import { FiUsers } from "react-icons/fi";
 import { VscFolderLibrary } from "react-icons/vsc";
@@ -15,12 +15,14 @@ function About() {
 
       <div className='container about_container'>
 
+        {/* IMAGE SECTION */}
         <div className='about_me'>
           <div className='about_me_image'>
-            <img src={IMageME} alt='web development team' />
+            <img src={DevImage} alt='web development showcase' />
           </div>
         </div>
 
+        {/* CONTENT SECTION */}
         <div className='about_content'>
 
           <div className='about_cards'>

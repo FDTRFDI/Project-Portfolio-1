@@ -4,36 +4,43 @@
 
 .about_container {
   display: grid;
-  grid-template-columns: 35% 55%;
-  gap: 10%;
+  grid-template-columns: 40% 55%;
+  gap: 5%;
   align-items: center;
+  margin-top: 2rem;
 }
 
+/* IMAGE BOX */
 .about_me {
   width: 100%;
-  aspect-ratio: 1/1;
-  border-radius: 2rem;
+  border-radius: 1.5rem;
+  padding: 0;
   background: linear-gradient(45deg, transparent, var(--color-primary), transparent);
-  padding: 1rem;
 }
 
+/* IMAGE WRAPPER */
 .about_me_image {
-  transform: rotate(8deg);
-  border-radius: 2rem;
+  width: 100%;
+  border-radius: 1.5rem;
   overflow: hidden;
-  transition: 0.4s ease;
-  box-shadow: 0 0 25px rgba(140, 0, 255, 0.3);
+  box-shadow: 0 0 35px rgba(140, 0, 255, 0.4);
+  background: #000;
 }
 
-.about_me_image:hover {
-  transform: rotate(0deg);
-  box-shadow: 0 0 40px rgba(140, 0, 255, 0.6);
+/* IMAGE FULL SIZE */
+.about_me_image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain; /* الصورة كاملة بدون قص */
 }
 
+/* CARDS */
 .about_cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .about_card {
@@ -68,6 +75,7 @@
   color: var(--color-light);
 }
 
+/* TEXT */
 .about_content p {
   margin: 2rem 0 2.6rem;
   color: var(--color-light);
@@ -86,14 +94,14 @@
   }
 
   .about_me {
-    width: 60%;
-    margin: 2rem auto;
+    width: 80%;
+    margin: 0 auto;
   }
 }
 
 @media (max-width: 600px) {
   .about_me {
-    width: 70%;
+    width: 100%;
     margin: 1rem auto 2rem;
   }
 
