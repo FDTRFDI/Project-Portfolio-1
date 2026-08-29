@@ -7,29 +7,30 @@ import { FaXTwitter } from 'react-icons/fa6'
 
 function Footer() {
   return (
-<footer>
-<a href='#'className='footer_logo'maged elsayed></a>
-<ul className ='permalinks'></ul>
-<li> <a href="#"> Home  </a> </li>
-<li> <a href="#about">About </a> </li>
-<li> <a href="#skills"> Skills  </a> </li>
-<li> <a href="#services"> Services </a> </li>
-<li> <a href="#project"> Projects </a> </li>
-<li> <a href="#contact"> Contact </a> </li>
+    <footer>
 
+      <a href='#' className='footer_logo'>WebDev Agency</a>
 
-<div className='footer_socials'>
- <a href='#' target='_blank'> <FaFacebookF /> </a>
- <a href='#' target='_blank'> <FaInstagram /> </a>
- <a href='#' target='_blank'> < FaXTwitter /> </a>
+      <ul className='permalinks'>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#project">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
 
-</div>
+      <div className='footer_socials'>
+        <a href='#' target='_blank'><FaFacebookF /></a>
+        <a href='#' target='_blank'><FaInstagram /></a>
+        <a href='#' target='_blank'><FaXTwitter /></a>
+      </div>
 
-<div className='footer_copyright'>
-<small>&copy; <a href="#"> Maged Elsayed </a> All rights reserved </small>
+      <div className='footer_copyright'>
+        <small>&copy; WebDev Agency — All rights reserved</small>
+      </div>
 
-</div>
-</footer>
+    </footer>
   )
 }
 
