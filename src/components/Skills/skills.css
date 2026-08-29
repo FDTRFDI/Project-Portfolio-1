@@ -1,18 +1,10 @@
-/* ============================
-   SKILLS – PREMIUM DARK MODE
-============================ */
-
 .container_skills {
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
 }
 
-/* CARD */
-.container_skills .card_skill {
-  width: 30%;
+.card_skill {
   display: flex;
   align-items: center;
   gap: 1.2rem;
@@ -22,66 +14,37 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   transition: 0.4s ease;
-  box-shadow: 0 0 20px rgba(140, 0, 255, 0.2);
+  box-shadow: 0 0 20px rgba(138, 43, 226, 0.2);
 }
 
-.container_skills .card_skill:hover {
+.card_skill:hover {
   transform: translateY(-8px);
-  box-shadow: 0 0 35px rgba(140, 0, 255, 0.5);
+  box-shadow: 0 0 35px rgba(138, 43, 226, 0.5);
   border-color: var(--color-primary);
 }
 
-/* ICON */
-.container_skills .card_skill .icon {
-  width: 70px;
-  height: 70px;
-  padding: 10px;
+.card_skill .icon {
+  font-size: 45px;
+  padding: 12px;
   border-radius: 12px;
-  background: rgba(140, 0, 255, 0.15);
+  background: rgba(138, 43, 226, 0.15);
   display: flex;
   align-items: center;
   justify-content: center;
   transition: 0.3s ease;
 }
 
-.container_skills .card_skill:hover .icon {
+.card_skill:hover .icon {
   transform: scale(1.1);
-  background: rgba(140, 0, 255, 0.25);
+  background: rgba(138, 43, 226, 0.25);
 }
 
-/* TITLE */
-.container_skills .card_skill h4 {
+.card_skill h4 {
   font-size: 18px;
   color: var(--color-white);
-  margin-bottom: 5px;
 }
 
-/* TEXT */
-.container_skills .card_skill p {
+.card_skill p {
   font-size: 14px;
   color: var(--color-light);
-}
-
-/* ============================
-   RESPONSIVE
-============================ */
-
-@media (max-width: 1024px) {
-  .container_skills .card_skill {
-    width: 48%;
-  }
-}
-
-@media (max-width: 600px) {
-  .container_skills .card_skill {
-    width: 100%;
-  }
-
-  section {
-    padding-top: 5rem;
-  }
-
-  .top_section h2 {
-    margin-bottom: 2rem;
-  }
 }
