@@ -1,7 +1,6 @@
 import React from "react";
 import "./home.css";
 import { FaLinkedin, FaGithub, FaInstagram, FaWhatsapp } from "react-icons/fa";
-import HeroImage from "../../assets/home-team.png"; // غيّر اسم الصورة حسب الموجود عندك
 
 function Home() {
   return (
