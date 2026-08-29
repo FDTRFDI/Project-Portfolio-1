@@ -1,5 +1,5 @@
 import React from "react";
-import "./Home.css";
+import "./HomeStyles.css";
 import { FaLinkedin, FaGithub, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import HeroImage from "../../assets/home-team.png";
 
