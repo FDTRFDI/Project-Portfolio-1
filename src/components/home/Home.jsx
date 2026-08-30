@@ -9,7 +9,7 @@ function Home() {
 
       {/* زر الواتساب ثابت */}
       <a
-        href="https://wa.me/971542483423"
+        href="https://wa.me/201234567890"
         className="whatsapp_float"
         target="_blank"
       >
