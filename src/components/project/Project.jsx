@@ -1,55 +1,37 @@
 import React from 'react';
 import "./project.css";
-import IMG1 from '../../assets/portfolio1.jpg';
-import IMG2 from '../../assets/portfolio2.jpg';
-import IMG3 from '../../assets/portfolio3.jpg';
-import IMG4 from '../../assets/portfolio4.jpg';
-import IMG5 from '../../assets/portfolio5.png';
-import IMG6 from '../../assets/portfolio6.jpg';
+import IMG1 from '../../assets/1.png';
+import IMG2 from '../../assets/2.png';
+import IMG3 from '../../assets/3.png';
+import IMG4 from '../../assets/4.png';
+
 
 const portfolioDate = [
   {
     id: 1,
     image: IMG1,
-    title: "Financial Data Dashboard",
-    github: 'https://github.com/project1',
-    demo: 'https://demo1.com',
+    title: "E-Commerce Website",
+    demo: 'https://project-portfolio-1-eight.vercel.app/',
   },
   {
     id: 2,
     image: IMG2,
-    title: "Futuristic Stats Interface",
-    github: 'https://github.com/project2',
-    demo: 'https://demo2.com',
+    title: "web designer Dubai",
+    demo: 'https://project-portfolio-1-eight.vercel.app/',
   },
   {
     id: 3,
     image: IMG3,
-    title: "Project Analytics Mobile",
-    github: 'https://github.com/project3',
-    demo: 'https://demo3.com',
+    title: "Restaurant Ordering System",
+    demo: 'https://fdtrfdi.github.io/ReactProjects/',
   },
   {
     id: 4,
     image: IMG4,
     title: "Finance Task Manager",
-    github: 'https://github.com/project4',
-    demo: 'https://demo4.com',
+    demo: 'https://alkhayma.com/restaurant/al-khayma-heritage-restaurant-dubai',
   },
-  {
-    id: 5,
-    image: IMG5,
-    title: "Visual Insights Hub",
-    github: 'https://github.com/project5',
-    demo: 'https://demo5.com',
-  },
-  {
-    id: 6,
-    image: IMG6,
-    title: "Interactive Decision Dashboard",
-    github: 'https://github.com/project6',
-    demo: 'https://demo6.com',
-  },
+
 ];
 
 function Project() {
