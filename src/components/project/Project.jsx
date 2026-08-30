@@ -1,64 +1,122 @@
 import React from 'react';
 import "./project.css";
+
 import IMG1 from '../../assets/1.png';
 import IMG2 from '../../assets/2.png';
 import IMG3 from '../../assets/3.png';
 import IMG4 from '../../assets/4.png';
 
 
-const portfolioDate = [
+const portfolioData = [
   {
     id: 1,
     image: IMG1,
     title: "E-Commerce Website",
-    demo: 'https://women-ecommerce-ui.onrender.com/',
+    description:
+      "Modern responsive e-commerce website with a clean user experience.",
+    demo: "https://women-ecommerce-ui.onrender.com/",
   },
+
   {
     id: 2,
     image: IMG2,
-    title: "web designer Dubai",
-    demo: 'https://project-portfolio-1-eight.vercel.app/',
+    title: "Web Design Dubai",
+    description:
+      "Modern web design and development portfolio website for a Dubai-based web development service.",
+    demo: "https://project-portfolio-1-eight.vercel.app/",
   },
+
   {
     id: 3,
     image: IMG3,
     title: "Restaurant Ordering System",
-    demo: 'https://fdtrfdi.github.io/ReactProjects/',
+    description:
+      "Responsive restaurant ordering interface designed for a smooth online customer experience.",
+    demo: "https://fdtrfdi.github.io/ReactProjects/",
   },
+
   {
     id: 4,
     image: IMG4,
-    title: "Finance Task Manager",
-    demo: 'https://alkhayma.com/restaurant/al-khayma-heritage-restaurant-dubai',
+    title: "Al Khayma Heritage Restaurant Dubai",
+    description:
+      "Restaurant website project for Al Khayma Heritage Restaurant in Dubai.",
+    demo: "https://alkhayma.com/restaurant/al-khayma-heritage-restaurant-dubai",
   },
-
 ];
+
 
 function Project() {
   return (
-    <section id="project" className='project'>
-      
-      <div className='top_section'>
+    <section id="project" className="project">
+
+      {/* SECTION HEADER */}
+      <div className="top_section">
+
         <h5>Our Work</h5>
-        <h2>Recent Projects</h2>
+
+        <h2>
+          Recent Web Design & Development Projects
+        </h2>
+
       </div>
 
-      <div className='container project_container'>
-        {portfolioDate.map(({ id, image, title, demo }) => (
-          <article key={id} className='protfolio_item'>
-            
-            <div className='protfolio_item_img'>
-              <img src={image} alt={title} />
-            </div>
 
-            <h3>{title}</h3>
+      {/* PROJECTS */}
+      <div className="container project_container">
 
-            <div className='protfolio_item_btns'>
-              <a href={demo} target="_blank" className='btn btn-primary'>Live Demo</a>
-            </div>
+        {portfolioData.map(
+          ({ id, image, title, description, demo }) => (
 
-          </article>
-        ))}
+            <article
+              key={id}
+              className="protfolio_item"
+            >
+
+              {/* PROJECT IMAGE */}
+              <div className="protfolio_item_img">
+
+                <img
+                  src={image}
+                  alt={`${title} - Web Design Project`}
+                  loading="lazy"
+                />
+
+              </div>
+
+
+              {/* PROJECT TITLE */}
+              <h3>
+                {title}
+              </h3>
+
+
+              {/* PROJECT DESCRIPTION */}
+              <p className="text-light">
+                {description}
+              </p>
+
+
+              {/* LIVE DEMO */}
+              <div className="protfolio_item_btns">
+
+                <a
+                  href={demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-primary"
+                  aria-label={`View ${title} live demo`}
+                >
+                  Live Demo
+                </a>
+
+              </div>
+
+            </article>
+
+          )
+        )}
+
       </div>
 
     </section>

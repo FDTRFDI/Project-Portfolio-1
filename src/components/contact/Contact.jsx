@@ -37,74 +37,104 @@ function Contact() {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm(
-      'service_vlkb00s',
-      'template_l7rtxte',
-      form.current,
-      'diHA3a7YwWzBDmcfH'
-    );
-
-    e.target.reset();
+    emailjs
+      .sendForm(
+        'service_vlkb00s',
+        'template_l7rtxte',
+        form.current,
+        'diHA3a7YwWzBDmcfH'
+      )
+      .then(
+        () => {
+          alert("Message sent successfully!");
+          e.target.reset();
+        },
+        (error) => {
+          console.error("EmailJS Error:", error);
+          alert("Failed to send message. Please try again.");
+        }
+      );
   };
 
   return (
-    <section className='contact' id="contact">
+    <section className="contact" id="contact">
 
-      <div className='top_section'>
+      <div className="top_section">
         <h5>Get in Touch</h5>
         <h2>Contact Us</h2>
       </div>
 
-      <div className='container contact_container'>
+      <div className="container contact_container">
 
-        <div className='contact_options'>
+        <div className="contact_options">
+
           {ContactData.map(({ id, icon, title, info, link }) => (
-            <article key={id} className='contact_option'>
+            <article
+              key={id}
+              className="contact_option"
+            >
+
               {icon}
+
               <h4>{title}</h4>
+
               <h5>{info}</h5>
 
               <a
                 href={link}
-                target='_blank'
-                rel='noopener noreferrer'
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                {title === "TikTok" ? "View Profile" : "Send Message"}
+                {title === "TikTok"
+                  ? "View Profile"
+                  : "Send Message"}
               </a>
+
             </article>
           ))}
+
         </div>
 
-        <form ref={form} onSubmit={sendEmail}>
-          <input 
-            type='text' 
-            placeholder='Full Name' 
-            name='name' 
-            required 
+        <form
+          ref={form}
+          onSubmit={sendEmail}
+        >
+
+          <input
+            type="text"
+            placeholder="Full Name"
+            name="name"
+            required
           />
 
-          <input 
-            type='email' 
-            placeholder='Your Email' 
-            name='cc' 
-            required 
+          <input
+            type="email"
+            placeholder="Your Email"
+            name="cc"
+            required
           />
 
           <textarea
-            name='message'
+            name="message"
             rows={10}
-            placeholder='Enter your message'
+            placeholder="Enter your message"
             required
           ></textarea>
 
-          <button className='btn btn-primary'>
+          <button
+            type="submit"
+            className="btn btn-primary"
+          >
             Send Message
           </button>
+
         </form>
 
       </div>
+
     </section>
   );
 }
 
 export default Contact;
+
