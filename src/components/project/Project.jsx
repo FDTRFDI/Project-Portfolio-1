@@ -11,7 +11,7 @@ const portfolioDate = [
     id: 1,
     image: IMG1,
     title: "E-Commerce Website",
-    demo: 'https://project-portfolio-1-eight.vercel.app/',
+    demo: 'https://women-ecommerce-ui.onrender.com/',
   },
   {
     id: 2,
@@ -44,7 +44,7 @@ function Project() {
       </div>
 
       <div className='container project_container'>
-        {portfolioDate.map(({ id, image, title, github, demo }) => (
+        {portfolioDate.map(({ id, image, title, demo }) => (
           <article key={id} className='protfolio_item'>
             
             <div className='protfolio_item_img'>
@@ -54,7 +54,6 @@ function Project() {
             <h3>{title}</h3>
 
             <div className='protfolio_item_btns'>
-              <a href={github} target="_blank" className='btn'>Github</a>
               <a href={demo} target="_blank" className='btn btn-primary'>Live Demo</a>
             </div>
 
