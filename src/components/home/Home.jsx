@@ -7,8 +7,9 @@ function Home() {
     <section id="home" className="hero_section">
       <div className="hero_overlay"></div>
 
+      {/* زر الواتساب ثابت */}
       <a
-        href="https://wa.me/+971545234489"
+        href="https://wa.me/971542483423"
         className="whatsapp_float"
         target="_blank"
       >

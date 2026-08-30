@@ -1,9 +1,10 @@
 /* SECTION BACKGROUND */
 .hero_section {
   width: 100%;
-  min-height: 120vh; /* مهم جداً لعرض الصورة كاملة */
+  min-height: 120vh; /* يخلي الصورة كاملة */
   background: url("../../assets/1about-BDAUW0NV.png") top center / cover no-repeat;
   position: relative;
+  background-color: #000;
 }
 
 /* DARK OVERLAY */
@@ -19,7 +20,7 @@
 /* WHATSAPP FLOAT */
 .whatsapp_float {
   position: fixed;
-  bottom: 25px;
+  bottom: 80px; /* رفعناه لفوق */
   right: 25px;
   background: #25d366;
   color: #fff;
@@ -38,7 +39,15 @@
 /* RESPONSIVE */
 @media (max-width: 900px) {
   .hero_section {
-    min-height: 140vh; /* للموبايل الصورة أطول */
-    background-position: center;
+    min-height: 150vh; /* للموبايل الصورة أطول */
+    background-position: top center;
+    background-size: cover;
+  }
+
+  .whatsapp_float {
+    bottom: 100px; /* أعلى للموبايل */
+    right: 20px;
+    font-size: 28px;
+    padding: 10px;
   }
 }
