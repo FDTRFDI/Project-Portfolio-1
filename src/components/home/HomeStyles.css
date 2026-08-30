@@ -1,26 +1,29 @@
-/* SECTION BACKGROUND */
 .hero_section {
   width: 100%;
-  height: 100vh; /* للكمبيوتر */
-  background: url("../../assets/1about-BDAUW0NV.png") top center / cover no-repeat;
   position: relative;
-  background-color: #000;
+  background: #000;
+  overflow: hidden;
+}
+
+.hero_bg {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
 }
 
 /* DARK OVERLAY */
 .hero_overlay {
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.35);
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1;
 }
 
-/* WHATSAPP FLOAT */
+/* WHATSAPP */
 .whatsapp_float {
   position: fixed;
-  bottom: 110px; /* رفعناه لفوق */
+  bottom: 110px;
   right: 25px;
   background: #25d366;
   color: #fff;
@@ -36,18 +39,20 @@
   transform: scale(1.1);
 }
 
-/* RESPONSIVE FOR MOBILE */
 @media (max-width: 900px) {
-  .hero_section {
-    height: 160vh; /* مهم جداً علشان الصورة تظهر كاملة */
-    background-position: top center;
-    background-size: cover;
-  }
-
   .whatsapp_float {
-    bottom: 150px; /* أعلى للموبايل */
+    bottom: 150px;
     right: 20px;
     font-size: 28px;
     padding: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .whatsapp_float {
+    bottom: 100px;
+    right: 18px;
+    font-size: 25px;
+    padding: 9px;
   }
 }
