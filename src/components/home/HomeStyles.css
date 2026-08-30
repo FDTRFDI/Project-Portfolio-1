@@ -1,10 +1,9 @@
 /* SECTION BACKGROUND */
 .hero_section {
   width: 100%;
-  min-height: 100vh; /* مهم جداً لعرض الصورة كاملة */
-  background: url("../../assets/1about-BDAUW0NV.png") top center / contain no-repeat;
+  min-height: 120vh; /* مهم جداً لعرض الصورة كاملة */
+  background: url("../../assets/1about-BDAUW0NV.png") top center / cover no-repeat;
   position: relative;
-  background-color: #000; /* لو الصورة فيها فراغات تحت */
 }
 
 /* DARK OVERLAY */
@@ -39,7 +38,7 @@
 /* RESPONSIVE */
 @media (max-width: 900px) {
   .hero_section {
-    background-size: cover; /* للموبايل */
+    min-height: 140vh; /* للموبايل الصورة أطول */
     background-position: center;
   }
 }
