@@ -1,114 +1,84 @@
-#home {
+/* SECTION BACKGROUND */
+.hero_section {
   width: 100%;
-  padding: 60px 80px;
-  margin-top: 20px;
-}
-
-.home_container {
+  height: 100vh;
+  background: url("../../assets/home-team.png") center/cover no-repeat;
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 40px;
+  justify-content: center;
 }
 
-/* LEFT TEXT */
-.home_content {
-  flex: 1;
-  max-width: 550px;
+/* DARK OVERLAY */
+.hero_overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
 }
 
-.home_content h1 {
-  font-size: 48px;
+/* CENTER TEXT */
+.hero_content {
+  text-align: center;
+  max-width: 700px;
+  color: #fff;
+}
+
+.hero_content h1 {
+  font-size: 52px;
   font-weight: 700;
   margin-bottom: 10px;
 }
 
-.home_content h2 {
+.hero_content h2 {
   font-size: 28px;
   font-weight: 500;
   margin-bottom: 20px;
 }
 
-.home_content p {
+.hero_content p {
   font-size: 18px;
   line-height: 1.6;
   margin-bottom: 30px;
 }
 
 /* BUTTONS */
-.home_buttons {
-  display: flex;
-  gap: 20px;
-}
-
-/* RIGHT IMAGE */
-.home_image {
-  flex: 1;
+.hero_buttons {
   display: flex;
   justify-content: center;
-}
-
-.home_image img {
-  width: 100%;
-  max-width: 600px;
-  border-radius: 12px;
-  object-fit: cover;
-}
-
-/* SOCIAL ICONS */
-.home_socials {
-  position: absolute;
-  left: 20px;
-  top: 40%;
-  display: flex;
-  flex-direction: column;
   gap: 20px;
 }
 
-.home_socials a {
-  font-size: 28px;
-  color: var(--color-white);
-  transition: 0.3s;
-}
-
-.home_socials a:hover {
-  color: var(--color-primary);
-  transform: scale(1.2);
-}
-
-/* WHATSAPP FLOAT */
-.whatsapp_float {
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  background: #25d366;
+.btn-primary {
+  background: #6a00ff;
   color: #fff;
-  font-size: 32px;
-  padding: 12px;
-  border-radius: 50%;
-  box-shadow: 0 0 20px rgba(0, 255, 120, 0.5);
-  transition: 0.3s;
+  padding: 14px 28px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
 }
 
-.whatsapp_float:hover {
-  transform: scale(1.1);
+.btn-secondary {
+  background: transparent;
+  border: 2px solid #6a00ff;
+  color: #6a00ff;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 16px;
 }
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
-  .home_container {
-    flex-direction: column;
-    text-align: center;
-    padding: 40px 20px;
+  .hero_content h1 {
+    font-size: 38px;
   }
-
-  .home_image img {
-    max-width: 400px;
-    margin-top: 30px;
+  .hero_content h2 {
+    font-size: 22px;
   }
-
-  .home_socials {
-    left: 10px;
-    top: 30%;
+  .hero_content p {
+    font-size: 16px;
   }
 }
