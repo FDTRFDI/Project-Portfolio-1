@@ -1,7 +1,7 @@
 /* SECTION BACKGROUND */
 .hero_section {
   width: 100%;
-  min-height: 140vh; /* يخلي الصورة كاملة */
+  height: 100vh; /* للكمبيوتر */
   background: url("../../assets/1about-BDAUW0NV.png") top center / cover no-repeat;
   position: relative;
   background-color: #000;
@@ -20,7 +20,7 @@
 /* WHATSAPP FLOAT */
 .whatsapp_float {
   position: fixed;
-  bottom: 120px; /* رفعناه لفوق */
+  bottom: 110px; /* رفعناه لفوق */
   right: 25px;
   background: #25d366;
   color: #fff;
@@ -36,16 +36,16 @@
   transform: scale(1.1);
 }
 
-/* RESPONSIVE */
+/* RESPONSIVE FOR MOBILE */
 @media (max-width: 900px) {
   .hero_section {
-    min-height: 180vh; /* للموبايل الصورة أطول */
+    height: 160vh; /* مهم جداً علشان الصورة تظهر كاملة */
     background-position: top center;
     background-size: cover;
   }
 
   .whatsapp_float {
-    bottom: 140px; /* أعلى للموبايل */
+    bottom: 150px; /* أعلى للموبايل */
     right: 20px;
     font-size: 28px;
     padding: 10px;
