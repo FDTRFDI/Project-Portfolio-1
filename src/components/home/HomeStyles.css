@@ -1,49 +1,114 @@
 #home {
-  padding: 4rem 0;
+  width: 100%;
+  padding: 60px 80px;
+  margin-top: 20px;
 }
 
 .home_container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 2rem;
-}
-
-.home_socials {
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
 }
 
-.home_socials a {
-  font-size: 1.5rem;
-  color: var(--color-primary);
+/* LEFT TEXT */
+.home_content {
+  flex: 1;
+  max-width: 550px;
 }
 
 .home_content h1 {
-  font-size: 2.5rem;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
 
 .home_content h2 {
-  font-size: 1.5rem;
-  color: var(--color-light);
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 20px;
 }
 
+.home_content p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* BUTTONS */
 .home_buttons {
-  margin-top: 1.5rem;
   display: flex;
-  gap: 1rem;
+  gap: 20px;
+}
+
+/* RIGHT IMAGE */
+.home_image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
 .home_image img {
   width: 100%;
-  border-radius: 1rem;
+  max-width: 600px;
+  border-radius: 12px;
+  object-fit: cover;
 }
 
+/* SOCIAL ICONS */
+.home_socials {
+  position: absolute;
+  left: 20px;
+  top: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.home_socials a {
+  font-size: 28px;
+  color: var(--color-white);
+  transition: 0.3s;
+}
+
+.home_socials a:hover {
+  color: var(--color-primary);
+  transform: scale(1.2);
+}
+
+/* WHATSAPP FLOAT */
 .whatsapp_float {
   position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  font-size: 2rem;
-  color: #273d2f;
+  bottom: 25px;
+  right: 25px;
+  background: #25d366;
+  color: #fff;
+  font-size: 32px;
+  padding: 12px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 255, 120, 0.5);
+  transition: 0.3s;
+}
+
+.whatsapp_float:hover {
+  transform: scale(1.1);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .home_container {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .home_image img {
+    max-width: 400px;
+    margin-top: 30px;
+  }
+
+  .home_socials {
+    left: 10px;
+    top: 30%;
+  }
 }
