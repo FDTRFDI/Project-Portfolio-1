@@ -2,8 +2,8 @@ import React, { useRef } from 'react';
 import "./contact.css";
 
 import { MdOutlineEmail } from 'react-icons/md';
-import { RiMessengerLine } from 'react-icons/ri';
 import { BsWhatsapp } from 'react-icons/bs';
+import { FaTiktok } from 'react-icons/fa';
 
 import emailjs from '@emailjs/browser';
 
@@ -12,22 +12,22 @@ const ContactData = [
     id: 1,
     icon: <MdOutlineEmail />,
     title: "Email",
-    info: "Radatech@gmail.com",
-    link: "mailto:Radatech@gmail.com",
+    info: "webvanta9@gmail.com",
+    link: "mailto:webvanta9@gmail.com",
   },
   {
     id: 2,
-    icon: <RiMessengerLine />,
-    title: "Messenger",
-    info: "Radatech",
-    link: "https://m.me/houdareda.99",
-  },
-  {
-    id: 3,
     icon: <BsWhatsapp />,
     title: "WhatsApp",
     info: "+971542483423",
     link: "https://api.whatsapp.com/send?phone=971542483423",
+  },
+  {
+    id: 3,
+    icon: <FaTiktok />,
+    title: "TikTok",
+    info: "@createwebdesign",
+    link: "https://www.tiktok.com/@createwebdesign",
   }
 ];
 
@@ -63,7 +63,14 @@ function Contact() {
               {icon}
               <h4>{title}</h4>
               <h5>{info}</h5>
-              <a href={link} target='_blank'>Send Message</a>
+
+              <a
+                href={link}
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                {title === "TikTok" ? "View Profile" : "Send Message"}
+              </a>
             </article>
           ))}
         </div>
@@ -90,7 +97,9 @@ function Contact() {
             required
           ></textarea>
 
-          <button className='btn btn-primary'>Send Message</button>
+          <button className='btn btn-primary'>
+            Send Message
+          </button>
         </form>
 
       </div>
