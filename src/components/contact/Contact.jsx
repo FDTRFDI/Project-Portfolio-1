@@ -46,6 +46,15 @@ function Contact() {
       )
       .then(
         () => {
+          // Google Ads Conversion
+          if (typeof window.gtag === "function") {
+            window.gtag('event', 'conversion', {
+              'send_to': 'AW-18420491649/6CS_CPimo-4CEIhYc9E',
+              'value': 1.0,
+              'currency': 'AED'
+            });
+          }
+
           alert("Message sent successfully!");
           e.target.reset();
         },
@@ -137,4 +146,3 @@ function Contact() {
 }
 
 export default Contact;
-
