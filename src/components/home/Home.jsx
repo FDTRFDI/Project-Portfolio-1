@@ -1,8 +1,7 @@
 import React from "react";
 import "./HomeStyles.css";
-import { FaWhatsapp, FaArrowRight } from "react-icons/fa";
 
-const heroImage = "/hero.webp";
+import { FaWhatsapp, FaArrowRight } from "react-icons/fa";
 
 function Home() {
   return (
@@ -74,16 +73,27 @@ function Home() {
 
           <div className="hero_image_wrapper">
 
-            <img
-              src={heroImage}
-              alt="Web design and web development services in Dubai"
-              className="hero_image"
-              width="1354"
-              height="1161"
-              fetchPriority="high"
-              loading="eager"
-              decoding="async"
-            />
+            <picture>
+
+              {/* Mobile / Tablet Image */}
+              <source
+                media="(max-width: 1000px)"
+                srcSet="/hero-mobile.webp"
+              />
+
+              {/* Desktop Image */}
+              <img
+                src="/hero.webp"
+                alt="Web design and web development services in Dubai"
+                className="hero_image"
+                width="1354"
+                height="1161"
+                fetchPriority="high"
+                loading="eager"
+                decoding="async"
+              />
+
+            </picture>
 
           </div>
 
