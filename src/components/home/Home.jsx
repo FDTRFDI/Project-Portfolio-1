@@ -1,7 +1,8 @@
 import React from "react";
 import "./HomeStyles.css";
 import { FaWhatsapp, FaArrowRight } from "react-icons/fa";
-import heroImage from "../../assets/BDAUW0NV.webp";
+
+const heroImage = "/hero.webp";
 
 function Home() {
   return (
