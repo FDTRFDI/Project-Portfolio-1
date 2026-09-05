@@ -30,6 +30,60 @@ const ContactData = [
 ];
 
 function Contact() {
+
+  const sendEmail = async (e) => {
+    e.preventDefault();
+
+    const form = e.target;
+    const button = form.querySelector("button");
+
+    button.disabled = true;
+    button.textContent = "Sending...";
+
+    try {
+      const formData = new FormData(form);
+
+      const response = await fetch(
+        "https://formsubmit.co/ajax/webvanta9@gmail.com",
+        {
+          method: "POST",
+          body: formData,
+          headers: {
+            Accept: "application/json"
+          }
+        }
+      );
+
+      const data = await response.json();
+
+      if (!data.success) {
+        throw new Error("Form submission failed");
+      }
+
+      // Google Ads Conversion
+      if (typeof window.gtag === "function") {
+        window.gtag("event", "conversion", {
+          send_to: "AW-18420491649/6CS_CPimo-4CEIhYc9E",
+          value: 1.0,
+          currency: "AED"
+        });
+      }
+
+      alert("Message sent successfully!");
+
+      form.reset();
+
+    } catch (error) {
+      console.error("Form Error:", error);
+
+      alert("Failed to send message. Please try again.");
+
+    } finally {
+      button.disabled = false;
+      button.textContent = "Send Message";
+    }
+  };
+
   return (
     <section className="contact" id="contact">
 
@@ -69,10 +123,7 @@ function Contact() {
 
         </div>
 
-        <form
-          action="https://formsubmit.co/webvanta9@gmail.com"
-          method="POST"
-        >
+        <form onSubmit={sendEmail}>
 
           <input
             type="text"
