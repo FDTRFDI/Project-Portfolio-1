@@ -1,8 +1,7 @@
 import React from "react";
 import "./HomeStyles.css";
 import { FaWhatsapp, FaArrowRight } from "react-icons/fa";
-import heroImage from "../../assets/BDAUW0NV.png";
-
+import heroImage from "../../assets/BDAUW0NV.webp";
 function Home() {
   return (
     <section id="home" className="hero_section">
