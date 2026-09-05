@@ -47,6 +47,12 @@
       content="index, follow"
     />
 
+    <!-- Canonical -->
+    <link
+      rel="canonical"
+      href="https://webexpert24.com/"
+    />
+
     <!-- Open Graph / Social Sharing -->
     <meta
       property="og:title"
@@ -65,10 +71,9 @@
 
     <meta
       property="og:url"
-      content="https://project-portfolio-1-eight.vercel.app/"
+      content="https://webexpert24.com/"
     />
 
-    <!-- Website Language -->
     <meta
       property="og:locale"
       content="en_US"
@@ -80,6 +85,48 @@
       type="image/svg+xml"
       href="/vite.svg"
     />
+
+    <!-- Organization + LocalBusiness Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://webexpert24.com/#organization",
+            "name": "WebVanta",
+            "alternateName": "WebVanta Web Design",
+            "url": "https://webexpert24.com/",
+            "telephone": "+971545234489",
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "AE",
+              "addressLocality": "Dubai"
+            }
+          },
+          {
+            "@type": "LocalBusiness",
+            "@id": "https://webexpert24.com/#localbusiness",
+            "name": "WebVanta",
+            "url": "https://webexpert24.com/",
+            "telephone": "+971545234489",
+            "priceRange": "$$",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Dubai",
+              "addressCountry": "AE"
+            },
+            "areaServed": {
+              "@type": "Country",
+              "name": "United Arab Emirates"
+            },
+            "parentOrganization": {
+              "@id": "https://webexpert24.com/#organization"
+            }
+          }
+        ]
+      }
+    </script>
     <script type="module" crossorigin src="/assets/index-DdcdVQ5D.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-BCmRSw5y.css">
   </head>
