@@ -90,7 +90,7 @@ function Home() {
                 height="1161"
                 fetchPriority="high"
                 loading="eager"
-                decoding="async"
+                decoding="sync"
               />
 
             </picture>
