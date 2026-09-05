@@ -1,11 +1,10 @@
-import React from 'react';
+import React from "react";
 import "./project.css";
 
-import IMG1 from '../../assets/1.webp';
-import IMG2 from '../../assets/2.webp';
-import IMG3 from '../../assets/3.webp';
-import IMG4 from '../../assets/4.webp';
-
+import IMG1 from "../../assets/1.webp";
+import IMG2 from "../../assets/2.webp";
+import IMG3 from "../../assets/3.webp";
+import IMG4 from "../../assets/4.webp";
 
 const portfolioData = [
   {
@@ -45,7 +44,6 @@ const portfolioData = [
   },
 ];
 
-
 function Project() {
   return (
     <section id="project" className="project">
@@ -60,7 +58,6 @@ function Project() {
         </h2>
 
       </div>
-
 
       {/* PROJECTS */}
       <div className="container project_container">
@@ -80,22 +77,22 @@ function Project() {
                   src={image}
                   alt={`${title} - Web Design Project`}
                   loading="lazy"
+                  decoding="async"
+                  width="800"
+                  height="600"
                 />
 
               </div>
-
 
               {/* PROJECT TITLE */}
               <h3>
                 {title}
               </h3>
 
-
               {/* PROJECT DESCRIPTION */}
               <p className="text-light">
                 {description}
               </p>
-
 
               {/* LIVE DEMO */}
               <div className="protfolio_item_btns">

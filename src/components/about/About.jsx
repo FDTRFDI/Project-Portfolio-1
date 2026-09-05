@@ -1,11 +1,11 @@
-import React from 'react'
-import "./about.css"
+import React from "react";
+import "./about.css";
 
-import DevImage from "../../assets/about.webp"
+import DevImage from "../../assets/about.webp";
 
-import { FaAward } from "react-icons/fa"
-import { FiUsers } from "react-icons/fi"
-import { VscFolderLibrary } from "react-icons/vsc"
+import { FaAward } from "react-icons/fa";
+import { FiUsers } from "react-icons/fi";
+import { VscFolderLibrary } from "react-icons/vsc";
 
 function About() {
   return (
@@ -29,6 +29,10 @@ function About() {
             <img
               src={DevImage}
               alt="WebVanta web design and web development"
+              width="1354"
+              height="1161"
+              loading="lazy"
+              decoding="async"
             />
 
           </div>
@@ -113,7 +117,7 @@ function About() {
       </div>
 
     </section>
-  )
+  );
 }
 
-export default About
+export default About;

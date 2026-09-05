@@ -2,6 +2,7 @@ import React from "react";
 import "./HomeStyles.css";
 import { FaWhatsapp, FaArrowRight } from "react-icons/fa";
 import heroImage from "../../assets/BDAUW0NV.webp";
+
 function Home() {
   return (
     <section id="home" className="hero_section">
@@ -67,7 +68,6 @@ function Home() {
 
         </div>
 
-
         {/* RIGHT VISUAL */}
         <div className="hero_visual">
 
@@ -77,7 +77,10 @@ function Home() {
               src={heroImage}
               alt="Web design and web development services in Dubai"
               className="hero_image"
+              width="1354"
+              height="1161"
               fetchPriority="high"
+              loading="eager"
               decoding="async"
             />
 
@@ -88,7 +91,6 @@ function Home() {
         </div>
 
       </div>
-
 
       {/* WHATSAPP */}
       <a
