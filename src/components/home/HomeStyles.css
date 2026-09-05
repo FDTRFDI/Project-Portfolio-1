@@ -4,7 +4,6 @@
 
 .hero_section {
   position: relative;
-
   width: 100%;
   min-height: 720px;
 
@@ -34,7 +33,6 @@
 
 .hero_background {
   position: absolute;
-
   inset: 0;
 
   pointer-events: none;
@@ -61,7 +59,6 @@
 
 .hero_container {
   position: relative;
-
   z-index: 2;
 
   width: 90%;
@@ -72,7 +69,6 @@
   min-height: 720px;
 
   display: grid;
-
   grid-template-columns: 1fr 1fr;
 
   align-items: center;
@@ -89,7 +85,6 @@
 
 .hero_content {
   position: relative;
-
   z-index: 3;
 
   max-width: 650px;
@@ -120,7 +115,6 @@
   color: #b46cff;
 
   font-size: 12px;
-
   font-weight: 700;
 
   letter-spacing: 1.5px;
@@ -145,12 +139,7 @@
   letter-spacing: -1.5px;
 
   color: #ffffff;
-}
 
-
-/* Gradient effect on part of heading */
-
-.hero_content h1 {
   background: linear-gradient(
     90deg,
     #ffffff 0%,
@@ -210,7 +199,6 @@
   display: inline-flex;
 
   align-items: center;
-
   justify-content: center;
 
   gap: 10px;
@@ -220,7 +208,6 @@
   text-decoration: none;
 
   font-size: 15px;
-
   font-weight: 700;
 
   transition: 0.3s ease;
@@ -239,7 +226,7 @@
   );
 
   box-shadow:
-    0 10px 30px rgba(91, 40, 220, 0.35);
+    0 8px 22px rgba(91, 40, 220, 0.28);
 }
 
 
@@ -247,7 +234,7 @@
   transform: translateY(-3px);
 
   box-shadow:
-    0 15px 35px rgba(91, 40, 220, 0.5);
+    0 12px 28px rgba(91, 40, 220, 0.4);
 }
 
 
@@ -260,7 +247,7 @@
 
   background: rgba(255, 255, 255, 0.05);
 
-  backdrop-filter: blur(10px);
+  /* Removed backdrop-filter for faster paint */
 }
 
 
@@ -289,6 +276,7 @@
   font-size: 13px;
 }
 
+
 .hero_points span {
   white-space: nowrap;
 }
@@ -306,7 +294,6 @@
   display: flex;
 
   align-items: center;
-
   justify-content: center;
 }
 
@@ -321,7 +308,6 @@
   z-index: 2;
 
   width: 100%;
-
   max-width: 620px;
 
   height: 470px;
@@ -334,9 +320,12 @@
 
   background: rgba(255, 255, 255, 0.03);
 
+  /*
+    Reduced shadow complexity to improve
+    image rendering and LCP.
+  */
   box-shadow:
-    0 25px 80px rgba(0, 0, 0, 0.55),
-    0 0 50px rgba(100, 30, 255, 0.2);
+    0 20px 50px rgba(0, 0, 0, 0.45);
 }
 
 
@@ -352,22 +341,20 @@
 
   object-fit: cover;
 
-  /*
-    The original image contains text on the left.
-    We position the image toward the right so the
-    embedded text is mostly outside the visible area.
-  */
-
   object-position: 78% center;
 
-  transform: scale(1.08);
+  /*
+    Removed initial scale transform.
+    This allows the browser to paint the LCP image
+    more efficiently.
+  */
 
-  transition: transform 0.6s ease;
+  transition: transform 0.4s ease;
 }
 
 
 .hero_image_wrapper:hover .hero_image {
-  transform: scale(1.12);
+  transform: scale(1.04);
 }
 
 
@@ -382,16 +369,23 @@
   height: 420px;
 
   right: 0;
-
   top: 50%;
 
   transform: translateY(-50%);
 
   border-radius: 50%;
 
-  background: rgba(120, 40, 255, 0.25);
-
-  filter: blur(100px);
+  /*
+    Use radial-gradient instead of filter: blur().
+    This keeps the glow while reducing expensive paint work.
+  */
+  background:
+    radial-gradient(
+      circle,
+      rgba(120, 40, 255, 0.22) 0%,
+      rgba(120, 40, 255, 0.10) 35%,
+      transparent 70%
+    );
 
   z-index: 1;
 
@@ -428,7 +422,7 @@
   text-decoration: none;
 
   box-shadow:
-    0 0 20px rgba(0, 255, 120, 0.45);
+    0 0 18px rgba(0, 255, 120, 0.4);
 
   transition: 0.3s ease;
 
@@ -610,15 +604,18 @@
   .hero_image {
     object-position: 78% center;
 
-    transform: scale(1.12);
+    transform: none;
+  }
+
+
+  .hero_image_wrapper:hover .hero_image {
+    transform: none;
   }
 
 
   .hero_glow {
     width: 250px;
     height: 250px;
-
-    filter: blur(70px);
   }
 
 
