@@ -1,11 +1,9 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import "./contact.css";
 
 import { MdOutlineEmail } from 'react-icons/md';
 import { BsWhatsapp } from 'react-icons/bs';
 import { FaTiktok } from 'react-icons/fa';
-
-import emailjs from '@emailjs/browser';
 
 const ContactData = [
   {
@@ -32,40 +30,58 @@ const ContactData = [
 ];
 
 function Contact() {
-  const form = useRef();
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        'service_vlkb00s',
-        'template_l7rtxte',
-        form.current,
-        'diHA3a7YwWzBDmcfH'
-      )
-      .then(
-        () => {
+    const form = e.target;
+    const button = form.querySelector("button");
 
-          // Google Ads Conversion
-          if (typeof window.gtag === "function") {
-            window.gtag('event', 'conversion', {
-              'send_to': 'AW-18420491649/6CS_CPimo-4CEIhYc9E',
-              'value': 1.0,
-              'currency': 'AED'
-            });
+    button.disabled = true;
+    button.textContent = "Sending...";
+
+    try {
+      const formData = new FormData(form);
+
+      const response = await fetch(
+        "https://formsubmit.co/ajax/webvanta9@gmail.com",
+        {
+          method: "POST",
+          body: formData,
+          headers: {
+            Accept: "application/json"
           }
-
-          alert("Message sent successfully!");
-
-          e.target.reset();
-        },
-        (error) => {
-          console.error("EmailJS Error:", error);
-
-          alert("Failed to send message. Please try again.");
         }
       );
+
+      const data = await response.json();
+
+      if (data.success) {
+
+        // Google Ads Conversion
+        if (typeof window.gtag === "function") {
+          window.gtag("event", "conversion", {
+            send_to: "AW-18420491649/6CS_CPimo-4CEIhYc9E",
+            value: 1.0,
+            currency: "AED"
+          });
+        }
+
+        alert("Message sent successfully!");
+
+        form.reset();
+
+      } else {
+        throw new Error("Form submission failed");
+      }
+
+    } catch (error) {
+      console.error("Form Error:", error);
+      alert("Failed to send message. Please try again.");
+    }
+
+    button.disabled = false;
+    button.textContent = "Send Message";
   };
 
   return (
@@ -107,10 +123,7 @@ function Contact() {
 
         </div>
 
-        <form
-          ref={form}
-          onSubmit={sendEmail}
-        >
+        <form onSubmit={sendEmail}>
 
           <input
             type="text"
@@ -122,7 +135,7 @@ function Contact() {
           <input
             type="email"
             placeholder="Your Email"
-            name="cc"
+            name="email"
             required
           />
 
