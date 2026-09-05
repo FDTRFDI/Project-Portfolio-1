@@ -278,6 +278,12 @@
   object-position: 78% center;
 }
 
+
+/* =========================================================
+   HERO GLOW
+   Optimized for LCP / Paint Performance
+========================================================= */
+
 .hero_glow {
   position: absolute;
 
@@ -292,9 +298,7 @@
 
   border-radius: 50%;
 
-  background: rgba(120, 40, 255, 0.25);
-
-  filter: blur(100px);
+  background: rgba(120, 40, 255, 0.12);
 
   z-index: 1;
 
@@ -502,7 +506,7 @@
 
     height: 250px;
 
-    filter: blur(70px);
+    background: rgba(120, 40, 255, 0.10);
   }
 
   .whatsapp_float {
