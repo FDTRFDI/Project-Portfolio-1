@@ -79,6 +79,7 @@ function Home() {
               <source
                 media="(max-width: 1000px)"
                 srcSet="/hero-mobile.webp"
+                fetchPriority="high"
               />
 
               {/* Desktop Image */}
