@@ -2,16 +2,16 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
 
 import Home from "./components/home/Home";
+import About from "./components/about/About";
+import Skills from "./components/Skills/Skills";
+import Project from "./components/project/Project";
+import Services from "./components/services/Services";
+import Contact from "./components/contact/Contact";
+
 import Nav from "./components/nav/Nav";
 import Footer from "./components/footer/Footer";
 
-// Load sections/pages only when needed
-const About = lazy(() => import("./components/about/About"));
-const Skills = lazy(() => import("./components/Skills/Skills"));
-const Project = lazy(() => import("./components/project/Project"));
-const Services = lazy(() => import("./components/services/Services"));
-const Contact = lazy(() => import("./components/contact/Contact"));
-
+// SEO pages - lazy loaded
 const WebDesignDubai = lazy(
   () => import("./components/seo-pages/WebDesignDubai")
 );
@@ -31,6 +31,7 @@ const SeoServicesDubai = lazy(
 function App() {
   return (
     <BrowserRouter>
+
       <Nav />
 
       <Suspense fallback={null}>
@@ -85,6 +86,7 @@ function App() {
       </Suspense>
 
       <Footer />
+
     </BrowserRouter>
   );
 }
