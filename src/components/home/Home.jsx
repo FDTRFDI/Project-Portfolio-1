@@ -1,31 +1,95 @@
 import React from "react";
 import "./HomeStyles.css";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp, FaArrowRight } from "react-icons/fa";
 import heroImage from "../../assets/1about-BDAUW0NV.png";
 
 function Home() {
   return (
     <section id="home" className="hero_section">
 
-      {/* HERO IMAGE */}
-      <img
-        src={heroImage}
-        alt="Web Design and Web Development services in Dubai"
-        className="hero_bg"
-      />
+      {/* HERO BACKGROUND */}
+      <div className="hero_background"></div>
 
-      {/* DARK OVERLAY */}
-      <div className="hero_overlay"></div>
+      {/* HERO CONTENT */}
+      <div className="hero_container">
 
-      {/* SEO CONTENT */}
-      <div className="hero_content">
-        <h1>Web Design & Web Development in Dubai</h1>
+        {/* LEFT CONTENT */}
+        <div className="hero_content">
 
-        <p>
-          We create modern, responsive and high-performance websites
-          for businesses.
-        </p>
+          <span className="hero_badge">
+            WEB DESIGN & DEVELOPMENT
+          </span>
+
+          <h1>
+            Web Design & Web Development in Dubai
+          </h1>
+
+          <p>
+            We create modern, responsive and high-performance websites
+            that help businesses stand out and grow online.
+          </p>
+
+          {/* CTA BUTTONS */}
+          <div className="hero_buttons">
+
+            <a
+              href="/contact"
+              className="hero_btn primary_btn"
+            >
+              Get a Free Consultation
+              <FaArrowRight />
+            </a>
+
+            <a
+              href="/projects"
+              className="hero_btn secondary_btn"
+            >
+              View Our Projects
+            </a>
+
+          </div>
+
+          {/* TRUST POINTS */}
+          <div className="hero_points">
+
+            <span>
+              ✓ Responsive Websites
+            </span>
+
+            <span>
+              ✓ Modern Design
+            </span>
+
+            <span>
+              ✓ Performance Focused
+            </span>
+
+          </div>
+
+        </div>
+
+
+        {/* RIGHT VISUAL */}
+        <div className="hero_visual">
+
+          <div className="hero_image_wrapper">
+
+            <img
+              src={heroImage}
+              alt="Web design and web development services in Dubai"
+              className="hero_image"
+              fetchPriority="high"
+              decoding="async"
+            />
+
+          </div>
+
+          <div className="hero_glow"></div>
+
+        </div>
+
       </div>
+
 
       {/* WHATSAPP */}
       <a

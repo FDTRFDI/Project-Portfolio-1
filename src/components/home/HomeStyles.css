@@ -3,97 +3,401 @@
 ========================================================= */
 
 .hero_section {
-  width: 100%;
   position: relative;
-  background: #000;
-  overflow: hidden;
-}
 
-/* =========================================================
-   HERO IMAGE
-   الصورة تظهر بنسبة أبعادها الطبيعية
-========================================================= */
-
-.hero_bg {
-  display: block;
   width: 100%;
-  height: auto;
-  max-width: 100%;
+  min-height: 720px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 80% 45%,
+      rgba(91, 34, 180, 0.28),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #090014 0%,
+      #090b18 50%,
+      #06152b 100%
+    );
 }
 
+
 /* =========================================================
-   DARK OVERLAY
+   BACKGROUND EFFECT
 ========================================================= */
 
-.hero_overlay {
+.hero_background {
   position: absolute;
+
   inset: 0;
-  background: rgba(0, 0, 0, 0.35);
-  z-index: 1;
+
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(120, 40, 255, 0.16),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(0, 110, 255, 0.12),
+      transparent 30%
+    );
+
+  z-index: 0;
 }
 
+
 /* =========================================================
-   SEO CONTENT
+   MAIN CONTAINER
 ========================================================= */
 
-.hero_content {
-  position: absolute;
-
-  top: 50%;
-  left: 50%;
-
-  transform: translate(-50%, -50%);
-
-  width: 90%;
-  max-width: 900px;
-
-  text-align: center;
-
-  color: #fff;
+.hero_container {
+  position: relative;
 
   z-index: 2;
 
-  pointer-events: none;
+  width: 90%;
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  min-height: 720px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+
+  gap: 50px;
+
+  padding: 80px 0;
 }
+
+
+/* =========================================================
+   LEFT CONTENT
+========================================================= */
+
+.hero_content {
+  position: relative;
+
+  z-index: 3;
+
+  max-width: 650px;
+
+  text-align: left;
+
+  color: #fff;
+}
+
+
+/* =========================================================
+   BADGE
+========================================================= */
+
+.hero_badge {
+  display: inline-block;
+
+  margin-bottom: 22px;
+
+  padding: 8px 15px;
+
+  border: 1px solid rgba(150, 70, 255, 0.5);
+
+  border-radius: 50px;
+
+  background: rgba(120, 30, 255, 0.08);
+
+  color: #b46cff;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
 
 /* =========================================================
    H1
 ========================================================= */
 
 .hero_content h1 {
-  margin: 0 auto 18px;
+  margin: 0 0 25px;
 
-  font-size: clamp(28px, 5vw, 60px);
+  max-width: 650px;
 
-  line-height: 1.1;
+  font-size: clamp(42px, 5vw, 68px);
 
-  font-weight: 700;
+  line-height: 1.08;
 
-  letter-spacing: -0.5px;
+  font-weight: 800;
 
-  text-shadow:
-    0 2px 10px rgba(0, 0, 0, 0.8),
-    0 4px 25px rgba(0, 0, 0, 0.6);
+  letter-spacing: -1.5px;
+
+  color: #ffffff;
 }
 
+
+/* Gradient effect on part of heading */
+
+.hero_content h1 {
+  background: linear-gradient(
+    90deg,
+    #ffffff 0%,
+    #ffffff 45%,
+    #8d45ff 80%,
+    #b56cff 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+}
+
+
 /* =========================================================
-   HERO DESCRIPTION
+   DESCRIPTION
 ========================================================= */
 
 .hero_content p {
-  margin: 0 auto;
+  max-width: 600px;
 
-  max-width: 700px;
+  margin: 0 0 32px;
 
-  font-size: clamp(15px, 2vw, 21px);
+  color: rgba(255, 255, 255, 0.72);
 
-  line-height: 1.6;
+  font-size: 18px;
+
+  line-height: 1.7;
 
   font-weight: 400;
-
-  text-shadow:
-    0 2px 8px rgba(0, 0, 0, 0.8);
 }
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.hero_buttons {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  flex-wrap: wrap;
+
+  margin-bottom: 32px;
+}
+
+
+.hero_btn {
+  min-height: 52px;
+
+  padding: 0 24px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  border-radius: 10px;
+
+  text-decoration: none;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  transition: 0.3s ease;
+}
+
+
+/* PRIMARY BUTTON */
+
+.primary_btn {
+  color: #fff;
+
+  background: linear-gradient(
+    90deg,
+    #2563eb,
+    #8b2be2
+  );
+
+  box-shadow:
+    0 10px 30px rgba(91, 40, 220, 0.35);
+}
+
+
+.primary_btn:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 15px 35px rgba(91, 40, 220, 0.5);
+}
+
+
+/* SECONDARY BUTTON */
+
+.secondary_btn {
+  color: #fff;
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  background: rgba(255, 255, 255, 0.05);
+
+  backdrop-filter: blur(10px);
+}
+
+
+.secondary_btn:hover {
+  transform: translateY(-3px);
+
+  border-color: rgba(160, 80, 255, 0.8);
+
+  background: rgba(130, 50, 255, 0.12);
+}
+
+
+/* =========================================================
+   TRUST POINTS
+========================================================= */
+
+.hero_points {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 20px;
+
+  color: rgba(255, 255, 255, 0.58);
+
+  font-size: 13px;
+}
+
+.hero_points span {
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   RIGHT VISUAL
+========================================================= */
+
+.hero_visual {
+  position: relative;
+
+  min-height: 500px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+
+/* =========================================================
+   IMAGE WRAPPER
+========================================================= */
+
+.hero_image_wrapper {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  max-width: 620px;
+
+  height: 470px;
+
+  overflow: hidden;
+
+  border-radius: 24px;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  background: rgba(255, 255, 255, 0.03);
+
+  box-shadow:
+    0 25px 80px rgba(0, 0, 0, 0.55),
+    0 0 50px rgba(100, 30, 255, 0.2);
+}
+
+
+/* =========================================================
+   HERO IMAGE
+========================================================= */
+
+.hero_image {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  /*
+    The original image contains text on the left.
+    We position the image toward the right so the
+    embedded text is mostly outside the visible area.
+  */
+
+  object-position: 78% center;
+
+  transform: scale(1.08);
+
+  transition: transform 0.6s ease;
+}
+
+
+.hero_image_wrapper:hover .hero_image {
+  transform: scale(1.12);
+}
+
+
+/* =========================================================
+   IMAGE GLOW
+========================================================= */
+
+.hero_glow {
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  right: 0;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  border-radius: 50%;
+
+  background: rgba(120, 40, 255, 0.25);
+
+  filter: blur(100px);
+
+  z-index: 1;
+
+  pointer-events: none;
+}
+
 
 /* =========================================================
    WHATSAPP FLOAT
@@ -105,12 +409,15 @@
   bottom: 110px;
   right: 25px;
 
+  width: 58px;
+  height: 58px;
+
   display: flex;
+
   align-items: center;
   justify-content: center;
 
-  width: 58px;
-  height: 58px;
+  border-radius: 50%;
 
   background: #25d366;
 
@@ -118,42 +425,89 @@
 
   font-size: 32px;
 
-  border-radius: 50%;
-
-  box-shadow: 0 0 20px rgba(0, 255, 120, 0.5);
-
   text-decoration: none;
+
+  box-shadow:
+    0 0 20px rgba(0, 255, 120, 0.45);
 
   transition: 0.3s ease;
 
   z-index: 9999;
 }
 
+
 .whatsapp_float:hover {
   transform: scale(1.1);
 }
+
 
 /* =========================================================
    TABLET
 ========================================================= */
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
+
+  .hero_section {
+    min-height: auto;
+  }
+
+  .hero_container {
+    min-height: auto;
+
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+
+    padding: 90px 0 80px;
+  }
+
 
   .hero_content {
-    width: 85%;
+    max-width: 750px;
+
+    text-align: center;
+
+    margin: 0 auto;
   }
+
 
   .hero_content h1 {
-    font-size: clamp(26px, 6vw, 48px);
-    margin-bottom: 12px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
+
   .hero_content p {
-    font-size: clamp(14px, 2.5vw, 18px);
+    margin-left: auto;
+    margin-right: auto;
   }
+
+
+  .hero_buttons {
+    justify-content: center;
+  }
+
+
+  .hero_points {
+    justify-content: center;
+  }
+
+
+  .hero_visual {
+    min-height: 420px;
+  }
+
+
+  .hero_image_wrapper {
+    height: 400px;
+
+    max-width: 700px;
+  }
+
 
   .whatsapp_float {
     bottom: 150px;
+
     right: 20px;
 
     width: 52px;
@@ -163,36 +517,114 @@
   }
 }
 
+
 /* =========================================================
    MOBILE
 ========================================================= */
 
 @media (max-width: 600px) {
 
-  .hero_content {
-    width: 88%;
+  .hero_container {
+    width: 90%;
+
+    gap: 35px;
+
+    padding: 70px 0 60px;
   }
+
+
+  .hero_badge {
+    margin-bottom: 18px;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    padding: 7px 12px;
+  }
+
 
   .hero_content h1 {
-    font-size: clamp(22px, 7vw, 34px);
+    font-size: clamp(32px, 9vw, 44px);
 
-    line-height: 1.15;
+    line-height: 1.1;
 
-    margin-bottom: 8px;
+    letter-spacing: -0.8px;
 
-    letter-spacing: 0;
+    margin-bottom: 20px;
   }
+
 
   .hero_content p {
-    font-size: 14px;
+    font-size: 15px;
 
-    line-height: 1.4;
+    line-height: 1.6;
 
-    max-width: 500px;
+    margin-bottom: 26px;
   }
+
+
+  .hero_buttons {
+    flex-direction: column;
+
+    width: 100%;
+
+    gap: 12px;
+  }
+
+
+  .hero_btn {
+    width: 100%;
+
+    min-height: 50px;
+  }
+
+
+  .hero_points {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 9px;
+
+    font-size: 12px;
+
+    text-align: center;
+  }
+
+
+  .hero_visual {
+    min-height: 280px;
+  }
+
+
+  .hero_image_wrapper {
+    width: 100%;
+
+    height: 280px;
+
+    border-radius: 18px;
+  }
+
+
+  .hero_image {
+    object-position: 78% center;
+
+    transform: scale(1.12);
+  }
+
+
+  .hero_glow {
+    width: 250px;
+    height: 250px;
+
+    filter: blur(70px);
+  }
+
 
   .whatsapp_float {
     bottom: 100px;
+
     right: 18px;
 
     width: 48px;
@@ -202,23 +634,34 @@
   }
 }
 
+
 /* =========================================================
    VERY SMALL MOBILE
 ========================================================= */
 
 @media (max-width: 400px) {
 
-  .hero_content {
-    width: 90%;
+  .hero_container {
+    width: 92%;
+
+    padding-top: 60px;
   }
+
 
   .hero_content h1 {
-    font-size: 21px;
+    font-size: 30px;
   }
 
+
   .hero_content p {
-    font-size: 13px;
+    font-size: 14px;
   }
+
+
+  .hero_image_wrapper {
+    height: 240px;
+  }
+
 
   .whatsapp_float {
     width: 45px;
