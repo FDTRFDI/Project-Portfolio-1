@@ -1,7 +1,7 @@
 import React from 'react'
 import "./about.css"
 
-import DevImage from "../../assets/about.jpg"
+import DevImage from "../../assets/about.webp"
 
 import { FaAward } from "react-icons/fa"
 import { FiUsers } from "react-icons/fi"

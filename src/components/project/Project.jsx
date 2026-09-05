@@ -1,10 +1,10 @@
 import React from 'react';
 import "./project.css";
 
-import IMG1 from '../../assets/1.png';
-import IMG2 from '../../assets/2.png';
-import IMG3 from '../../assets/3.png';
-import IMG4 from '../../assets/4.png';
+import IMG1 from '../../assets/1.webp';
+import IMG2 from '../../assets/2.webp';
+import IMG3 from '../../assets/3.webp';
+import IMG4 from '../../assets/4.webp';
 
 
 const portfolioData = [
