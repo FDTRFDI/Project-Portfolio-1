@@ -46,6 +46,7 @@ function Contact() {
       )
       .then(
         () => {
+
           // Google Ads Conversion
           if (typeof window.gtag === "function") {
             window.gtag('event', 'conversion', {
@@ -56,10 +57,12 @@ function Contact() {
           }
 
           alert("Message sent successfully!");
+
           e.target.reset();
         },
         (error) => {
           console.error("EmailJS Error:", error);
+
           alert("Failed to send message. Please try again.");
         }
       );
