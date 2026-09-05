@@ -1,146 +1,159 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+<head>
 
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+  <meta charset="UTF-8" />
 
-    <!-- Preload Hero Image for better LCP -->
-    <link
-      rel="preload"
-      as="image"
-      href="/hero.webp"
-      fetchpriority="high"
-    />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
 
-    <!-- Google Search Console Verification -->
-    <meta
-      name="google-site-verification"
-      content="z5reupAQ55OWsXYb03KjOiDl14FPW8oUZdK3nJJoZhE"
-    />
+  <!-- Preload the correct Hero image for each device -->
+  <link
+    rel="preload"
+    as="image"
+    href="/hero-mobile.webp"
+    media="(max-width: 1000px)"
+    fetchpriority="high"
+  />
 
-    <!-- Google Ads Tag -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=AW-18420491649"
-    ></script>
+  <link
+    rel="preload"
+    as="image"
+    href="/hero.webp"
+    media="(min-width: 1001px)"
+    fetchpriority="high"
+  />
 
-    <script>
-      window.dataLayer = window.dataLayer || [];
+  <!-- Google Search Console Verification -->
+  <meta
+    name="google-site-verification"
+    content="z5reupAQ55OWsXYb03KjOiDl14FPW8oUZdK3nJJoZhE"
+  />
 
-      function gtag() {
-        dataLayer.push(arguments);
-      }
+  <!-- Google Ads Tag -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=AW-18420491649"
+  ></script>
 
-      gtag("js", new Date());
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-      gtag("config", "AW-18420491649");
-    </script>
+    function gtag() {
+      dataLayer.push(arguments);
+    }
 
-    <!-- SEO -->
-    <title>
-      Web Design & Web Development Dubai | WebVanta
-    </title>
+    gtag("js", new Date());
 
-    <meta
-      name="description"
-      content="WebVanta provides professional web design and web development services in Dubai. We create modern, responsive websites, e-commerce websites and custom web solutions for businesses."
-    />
+    gtag("config", "AW-18420491649");
+  </script>
 
-    <meta
-      name="robots"
-      content="index, follow"
-    />
+  <!-- SEO -->
+  <title>
+    Web Design & Web Development Dubai | WebVanta
+  </title>
 
-    <!-- Canonical -->
-    <link
-      rel="canonical"
-      href="https://webexpert24.com/"
-    />
+  <meta
+    name="description"
+    content="WebVanta provides professional web design and web development services in Dubai. We create modern, responsive websites, e-commerce websites and custom web solutions for businesses."
+  />
 
-    <!-- Open Graph / Social Sharing -->
-    <meta
-      property="og:title"
-      content="Web Design & Web Development Dubai | WebVanta"
-    />
+  <meta
+    name="robots"
+    content="index, follow"
+  />
 
-    <meta
-      property="og:description"
-      content="Modern web design and web development services in Dubai for businesses."
-    />
+  <!-- Canonical -->
+  <link
+    rel="canonical"
+    href="https://webexpert24.com/"
+  />
 
-    <meta
-      property="og:type"
-      content="website"
-    />
+  <!-- Open Graph -->
+  <meta
+    property="og:title"
+    content="Web Design & Web Development Dubai | WebVanta"
+  />
 
-    <meta
-      property="og:url"
-      content="https://webexpert24.com/"
-    />
+  <meta
+    property="og:description"
+    content="Modern web design and web development services in Dubai for businesses."
+  />
 
-    <meta
-      property="og:locale"
-      content="en_US"
-    />
+  <meta
+    property="og:type"
+    content="website"
+  />
 
-    <!-- Favicon -->
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="/vite.svg"
-    />
+  <meta
+    property="og:url"
+    content="https://webexpert24.com/"
+  />
 
-    <!-- Organization + LocalBusiness Schema -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "Organization",
-            "@id": "https://webexpert24.com/#organization",
-            "name": "WebVanta",
-            "alternateName": "WebVanta Web Design",
-            "url": "https://webexpert24.com/",
-            "telephone": "+971545234489",
-            "address": {
-              "@type": "PostalAddress",
-              "addressCountry": "AE",
-              "addressLocality": "Dubai"
-            }
-          },
-          {
-            "@type": "LocalBusiness",
-            "@id": "https://webexpert24.com/#localbusiness",
-            "name": "WebVanta",
-            "url": "https://webexpert24.com/",
-            "telephone": "+971545234489",
-            "priceRange": "$$",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Dubai",
-              "addressCountry": "AE"
-            },
-            "areaServed": {
-              "@type": "Country",
-              "name": "United Arab Emirates"
-            },
-            "parentOrganization": {
-              "@id": "https://webexpert24.com/#organization"
-            }
+  <meta
+    property="og:locale"
+    content="en_US"
+  />
+
+  <!-- Favicon -->
+  <link
+    rel="icon"
+    type="image/svg+xml"
+    href="/vite.svg"
+  />
+
+  <!-- Organization + LocalBusiness Schema -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://webexpert24.com/#organization",
+          "name": "WebVanta",
+          "alternateName": "WebVanta Web Design",
+          "url": "https://webexpert24.com/",
+          "telephone": "+971545234489",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "AE",
+            "addressLocality": "Dubai"
           }
-        ]
-      }
-    </script>
-    <script type="module" crossorigin src="/assets/index-C2dzVZ-z.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-DxXIoKsN.css">
-  </head>
+        },
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://webexpert24.com/#localbusiness",
+          "name": "WebVanta",
+          "url": "https://webexpert24.com/",
+          "telephone": "+971545234489",
+          "priceRange": "$$",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Dubai",
+            "addressCountry": "AE"
+          },
+          "areaServed": {
+            "@type": "Country",
+            "name": "United Arab Emirates"
+          },
+          "parentOrganization": {
+            "@id": "https://webexpert24.com/#organization"
+          }
+        }
+      ]
+    }
+  </script>
 
-  <body>
-    <div id="root"></div>
+  <script type="module" crossorigin src="/assets/index-DI26ZrOJ.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DGUGLrHb.css">
+</head>
 
-  </body>
+<body>
+
+  <div id="root"></div>
+
+
+</body>
 </html>
