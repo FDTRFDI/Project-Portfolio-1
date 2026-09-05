@@ -63,7 +63,7 @@ function Contact() {
       // Google Ads Conversion
       if (typeof window.gtag === "function") {
         window.gtag("event", "conversion", {
-          send_to: "AW-18420491649/6CS_CPimo-4CEIhYc9E",
+          send_to: "AW-18420491649/6CS_CPiMo-4cEIHLyc9E",
           value: 1.0,
           currency: "AED"
         });
