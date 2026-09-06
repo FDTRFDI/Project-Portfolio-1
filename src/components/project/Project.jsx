@@ -1,37 +1,34 @@
 import React from "react";
 import "./project.css";
 
-import IMG1 from "../../assets/1.webp";
-import IMG2 from "../../assets/2.webp";
-import IMG3 from "../../assets/3.webp";
+import IMG1 from "../../assets/alboomdiving.png";
+import IMG2 from "../../ecofurniture.png";
+import IMG3 from "../../assets/mightysteels.png";
 import IMG4 from "../../assets/4.webp";
 
 const portfolioData = [
   {
     id: 1,
     image: IMG1,
-    title: "E-Commerce Website",
-    description:
-      "Modern responsive e-commerce website with a clean user experience.",
-    demo: "https://women-ecommerce-ui.onrender.com/",
+    title: "E-commerce & Dive Shop",
+    description:"Modern e-commerce website designed for a professional diving business",
+    demo: "https://www.alboomdiving.com/en",
   },
 
   {
     id: 2,
     image: IMG2,
-    title: "Web Design Dubai",
-    description:
-      "Modern web design and development portfolio website for a Dubai-based web development service.",
-    demo: "https://project-portfolio-1-eight.vercel.app/",
+    title: "Furniture E-commerce",
+    description:"Modern e-commerce website for a furniture business",
+    demo: "https://www.ecofurniture4u.com/",
   },
 
   {
     id: 3,
     image: IMG3,
-    title: "Restaurant Ordering System",
-    description:
-      "Responsive restaurant ordering interface designed for a smooth online customer experience.",
-    demo: "https://fdtrfdi.github.io/ReactProjects/",
+    title: "Industrial / Corporate",
+    description:"Professional website designed for an industrial steel and metal company",
+    demo: "https://www.mightysteelworks.com/",
   },
 
   {

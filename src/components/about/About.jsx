@@ -54,7 +54,7 @@ function About() {
               </h5>
 
               <small>
-                3+ years in professional web development
+                8+ years in professional web development
               </small>
 
             </div>
@@ -69,7 +69,7 @@ function About() {
               </h5>
 
               <small>
-                200+ satisfied clients worldwide
+                400+ satisfied clients worldwide
               </small>
 
             </div>
