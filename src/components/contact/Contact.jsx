@@ -17,8 +17,8 @@ const ContactData = [
     id: 2,
     icon: <BsWhatsapp />,
     title: "WhatsApp",
-    info: "+971542483423",
-    link: "https://api.whatsapp.com/send?phone=971542483423",
+    info: "+971545234489",
+    link: "https://api.whatsapp.com/send?phone=971545234489",
   },
   {
     id: 3,
