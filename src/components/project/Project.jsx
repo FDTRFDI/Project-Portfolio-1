@@ -35,8 +35,7 @@ const portfolioData = [
     id: 4,
     image: IMG4,
     title: "Al Khayma Heritage Restaurant Dubai",
-    description:
-      "Restaurant website project for Al Khayma Heritage Restaurant in Dubai.",
+    description:"Restaurant website project for Al Khayma Heritage Restaurant in Dubai.",
     demo: "https://alkhayma.com/restaurant/al-khayma-heritage-restaurant-dubai",
   },
 ];
