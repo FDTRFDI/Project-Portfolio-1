@@ -2,7 +2,7 @@ import React from "react";
 import "./project.css";
 
 import IMG1 from "../../assets/alboomdiving.png";
-import IMG2 from "../../ecofurniture.png";
+import IMG2 from "../../assets/ecofurniture.png";
 import IMG3 from "../../assets/mightysteels.png";
 import IMG4 from "../../assets/4.webp";
 
@@ -35,7 +35,8 @@ const portfolioData = [
     id: 4,
     image: IMG4,
     title: "Al Khayma Heritage Restaurant Dubai",
-    description:"Restaurant website project for Al Khayma Heritage Restaurant in Dubai.",
+    description:
+"Restaurant website project for Al Khayma Heritage Restaurant in Dubai.",
     demo: "https://alkhayma.com/restaurant/al-khayma-heritage-restaurant-dubai",
   },
 ];
