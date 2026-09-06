@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 import "./contact.css";
 
-import { MdOutlineEmail } from 'react-icons/md';
-import { BsWhatsapp } from 'react-icons/bs';
-import { FaTiktok } from 'react-icons/fa';
+import { MdOutlineEmail } from "react-icons/md";
+import { BsWhatsapp } from "react-icons/bs";
+import { FaTiktok } from "react-icons/fa";
 
 const ContactData = [
   {
@@ -26,15 +26,14 @@ const ContactData = [
     title: "TikTok",
     info: "@createwebdesign",
     link: "https://www.tiktok.com/@createwebdesign",
-  }
+  },
 ];
 
 function Contact() {
-
   const sendEmail = async (e) => {
     e.preventDefault();
 
-    const form = e.target;
+    const form = e.currentTarget;
     const button = form.querySelector("button");
 
     button.disabled = true;
@@ -49,10 +48,14 @@ function Contact() {
           method: "POST",
           body: formData,
           headers: {
-            Accept: "application/json"
-          }
+            Accept: "application/json",
+          },
         }
       );
+
+      if (!response.ok) {
+        throw new Error(`HTTP error: ${response.status}`);
+      }
 
       const data = await response.json();
 
@@ -61,23 +64,21 @@ function Contact() {
       }
 
       // Google Ads Conversion
+      // يتم التسجيل فقط بعد نجاح إرسال النموذج.
       if (typeof window.gtag === "function") {
         window.gtag("event", "conversion", {
           send_to: "AW-18420491649/6CS_CPiMo-4cEIHLyc9E",
           value: 1.0,
-          currency: "AED"
+          currency: "AED",
         });
       }
 
       alert("Message sent successfully!");
 
       form.reset();
-
     } catch (error) {
       console.error("Form Error:", error);
-
       alert("Failed to send message. Please try again.");
-
     } finally {
       button.disabled = false;
       button.textContent = "Send Message";
@@ -86,22 +87,15 @@ function Contact() {
 
   return (
     <section className="contact" id="contact">
-
       <div className="top_section">
         <h5>Get in Touch</h5>
         <h2>Contact Us</h2>
       </div>
 
       <div className="container contact_container">
-
         <div className="contact_options">
-
           {ContactData.map(({ id, icon, title, info, link }) => (
-            <article
-              key={id}
-              className="contact_option"
-            >
-
+            <article key={id} className="contact_option">
               {icon}
 
               <h4>{title}</h4>
@@ -110,21 +104,16 @@ function Contact() {
 
               <a
                 href={link}
-                target="_blank"
-                rel="noopener noreferrer"
+                target={title === "Email" ? undefined : "_blank"}
+                rel={title === "Email" ? undefined : "noopener noreferrer"}
               >
-                {title === "TikTok"
-                  ? "View Profile"
-                  : "Send Message"}
+                {title === "TikTok" ? "View Profile" : "Send Message"}
               </a>
-
             </article>
           ))}
-
         </div>
 
         <form onSubmit={sendEmail}>
-
           <input
             type="text"
             placeholder="Full Name"
@@ -164,11 +153,8 @@ function Contact() {
           >
             Send Message
           </button>
-
         </form>
-
       </div>
-
     </section>
   );
 }
