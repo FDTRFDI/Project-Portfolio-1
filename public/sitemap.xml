@@ -1,28 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- Homepage -->
   <url>
     <loc>https://webexpert24.com/</loc>
     <priority>1.0</priority>
   </url>
 
+  <!-- Web Design -->
   <url>
     <loc>https://webexpert24.com/web-design-dubai</loc>
     <priority>0.9</priority>
   </url>
 
+  <!-- Web Development -->
   <url>
     <loc>https://webexpert24.com/web-development-dubai</loc>
     <priority>0.9</priority>
   </url>
 
+  <!-- E-Commerce Websites -->
   <url>
     <loc>https://webexpert24.com/ecommerce-websites-dubai</loc>
     <priority>0.9</priority>
   </url>
 
+  <!-- SEO Services -->
   <url>
     <loc>https://webexpert24.com/seo-services-dubai</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Web Hosting -->
+  <url>
+    <loc>https://webexpert24.com/web-hosting-dubai</loc>
     <priority>0.9</priority>
   </url>
 
