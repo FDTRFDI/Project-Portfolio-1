@@ -11,7 +11,7 @@ import Contact from "./components/contact/Contact";
 import Nav from "./components/nav/Nav";
 import Footer from "./components/footer/Footer";
 
-// SEO pages - lazy loaded
+// SEO pages
 const WebDesignDubai = lazy(
   () => import("./components/seo-pages/WebDesignDubai")
 );
@@ -28,10 +28,13 @@ const SeoServicesDubai = lazy(
   () => import("./components/seo-pages/SeoServicesDubai")
 );
 
+const WebHostingDubai = lazy(
+  () => import("./components/seo-pages/WebHostingDubai")
+);
+
 function App() {
   return (
     <BrowserRouter>
-
       <Nav />
 
       <Suspense fallback={null}>
@@ -53,15 +56,28 @@ function App() {
           />
 
           {/* MAIN PAGES */}
-          <Route path="/about" element={<About />} />
+          <Route
+            path="/about"
+            element={<About />}
+          />
 
-          <Route path="/skills" element={<Skills />} />
+          <Route
+            path="/skills"
+            element={<Skills />}
+          />
 
-          <Route path="/projects" element={<Project />} />
+          <Route
+            path="/projects"
+            element={<Project />}
+          />
 
-          <Route path="/contact" element={<Contact />} />
+          <Route
+            path="/contact"
+            element={<Contact />}
+          />
 
           {/* SEO PAGES */}
+
           <Route
             path="/web-design-dubai"
             element={<WebDesignDubai />}
@@ -82,11 +98,15 @@ function App() {
             element={<SeoServicesDubai />}
           />
 
+          <Route
+            path="/web-hosting-dubai"
+            element={<WebHostingDubai />}
+          />
+
         </Routes>
       </Suspense>
 
       <Footer />
-
     </BrowserRouter>
   );
 }
